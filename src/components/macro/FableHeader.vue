@@ -7,9 +7,11 @@
                 <img src="../../assets/img/logo.png" alt="logo">
             </figure>
 
-            <div>
-                
-            </div>
+            <!-- menu -->
+            <MenuList />
+
+
+
         </div>
         
     </header>
@@ -17,21 +19,44 @@
 
 
 <script>
+import store from '../../store.js'
+import MenuList from '../commons/MenuList.vue'
+
+export default{
+    name: 'FableHeader',
+
+    components:{
+        MenuList
+    },
+
+    data(){
+        return{
+            store
+        }
+    }
+}
 
 </script>
 
 
 <style lang="scss" scoped>
 
-header{
-  
-    
-   
+header{   
+    max-height: 120px;
+
     background-color: white;
 
-    .menu__logo img{
-        max-height: 120px;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        .menu__logo img{
+            max-height: 120px;
+        }
     }
+
+
 }
 
 </style>
