@@ -10,7 +10,7 @@
         <div class="thumbnails">
 
             <div class="thumb" v-for="(objec, index) in setImages" :key="index"
-            :class="currentIndex === index ? 'activeThumb' : ''">
+            :class="currentIndex === index ? 'activeThumb' : ''" @click="thumbClick(index)">
 
             </div>        
         </div>
@@ -32,6 +32,7 @@ export default{
     data(){
         return{
             currentIndex: 0,
+            clock: undefined,
             setImages:[
                 {
                     icon:[
@@ -71,6 +72,29 @@ export default{
                 }
             ]
         }
+    },
+
+    methods:{
+        thumbClick: function(i){
+            this.currentIndex = i
+        },
+
+        click_next: function(){
+            this.currentIndex++;
+            if(this.currentIndex > this.setImages.length -1){this.currentIndex = 0}
+        },
+
+        stop_play: function(){
+            clearInterval(this.clock)
+        },
+
+        start_play: function(){
+            this.clock = setInterval(this.click_next, 3000)
+        }
+    },
+
+    mounted(){
+        this.start_play()
     }
 }
 
@@ -97,6 +121,7 @@ export default{
             width: 35px;
             border: 2px solid orange;
             align-self: flex-end;
+            cursor: pointer;
         }
 
         .activeThumb{
