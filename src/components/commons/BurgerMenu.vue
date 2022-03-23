@@ -65,7 +65,7 @@ export default{
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 860px) {
 
     .burger__menu.active__burger{
         display: block;

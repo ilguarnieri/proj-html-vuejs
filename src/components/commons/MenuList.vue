@@ -102,7 +102,7 @@ export default{
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 860px) {
 
     .header__menu{
 

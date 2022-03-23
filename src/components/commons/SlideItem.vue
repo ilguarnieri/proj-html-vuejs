@@ -137,7 +137,7 @@ export default{
     }
 }
 
-@media screen and(max-width:850px) {
+@media screen and(max-width:860px) {
 
     .slide__animation{
         min-height: 350px;
