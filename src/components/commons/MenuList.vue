@@ -21,7 +21,19 @@
 
         <!-- burger menu icon -->
         <div class="burger__icon">
-            <font-awesome-icon icon="fa-bars" />
+
+            <!-- burger -->
+            <font-awesome-icon
+            v-if="!store.burgerActive"
+            @click="store.burgerActive = true"
+            icon="fa-bars" />
+
+            <!-- close -->
+            <font-awesome-icon
+            v-else
+            @click="store.burgerActive = false"            
+            icon="fa-times" />
+            
         </div>
 
     </section>    
@@ -45,6 +57,7 @@ export default{
 
 <style lang="scss" scoped>
 @import '../../assets/scss/_variables.scss';
+@import '../../assets/scss/_common.scss';
 
 .header__menu{
     color: $textHeader;
@@ -62,6 +75,8 @@ export default{
             gap: 20px;
             height: 120px;
             user-select: none;
+            @include transition;
+            
 
             .icon__item{
                 margin: 0 30px;
@@ -70,6 +85,7 @@ export default{
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: contain;
+                
             }
 
             &:hover, &.active{

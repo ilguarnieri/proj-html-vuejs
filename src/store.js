@@ -2,6 +2,7 @@ import Vue from 'vue'
 
 const store = Vue.observable({
     activeIndex: 0,
+    burgerActive: false,
     menu:[
         {
             text: 'Home',

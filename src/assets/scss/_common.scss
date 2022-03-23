@@ -23,3 +23,7 @@ a{
     text-decoration: none;
     color: currentColor;
 }
+
+@mixin transition{
+    transition: all 250ms linear;
+}

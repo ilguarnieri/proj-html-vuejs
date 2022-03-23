@@ -9,12 +9,6 @@
 
             <!-- menu -->
             <MenuList />
-            
-
-            <!-- hamburger menu -->
-
-
-
         </div>
         
     </header>
@@ -56,10 +50,8 @@ header{
     
         .menu__logo img{
             max-height: 120px;
+            user-select: none;
         }
     }
-
-
 }
-
 </style>

@@ -2,17 +2,21 @@
   <body id="app">
 
     <FableHeader />
+    <!-- hamburger menu -->
+    <BurgerMenu />
 
   </body>
 </template>
 
 <script>
 import FableHeader from './components/macro/FableHeader.vue'
+import BurgerMenu from './components/commons/BurgerMenu.vue'
 
 export default {
   name: 'App',
   components: {
     FableHeader,
+    BurgerMenu
   }
 }
 </script>
