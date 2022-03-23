@@ -34,6 +34,7 @@ a{
     font-weight: bold;
     color: white;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 @mixin transition{
@@ -43,6 +44,15 @@ a{
 @mixin btn__orange{
     background-color: $orange;
     border: none;
+
+    &:hover{
+        background-color: $butterfly;
+    }
+}
+
+@mixin btn__violet{
+    background-color: transparent;
+    border: 2px solid $white;
 
     &:hover{
         background-color: $butterfly;

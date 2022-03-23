@@ -90,7 +90,7 @@ export default{
 
             &:hover, &.active{
                 background-color: $orange;
-                color: $textHeaderHover;
+                color: $white;
             }
         }
     }

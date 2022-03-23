@@ -1,11 +1,17 @@
 <template>
   <body id="app">
 
+    <!-- header -->
     <FableHeader />
-    <!-- burger menu -->
-    <BurgerMenu />
 
-    <FirstJumbo />
+    <!-- burger menu -->
+    <BurgerMenu />    
+
+    <div v-show="!store.burgerActive">
+
+      <!-- main -->
+      <FableMain />
+    </div>
 
   </body>
 </template>
@@ -13,14 +19,20 @@
 <script>
 import FableHeader from './components/macro/FableHeader.vue'
 import BurgerMenu from './components/commons/BurgerMenu.vue'
-import FirstJumbo from './components/sections/FirstJumbo.vue'
+import FableMain from './components/macro/FableMain.vue'
+import store from './store.js'
 
 export default {
   name: 'App',
+  data(){
+    return{
+      store
+    }
+  },
   components: {
     FableHeader,
     BurgerMenu,
-    FirstJumbo
+    FableMain
   }
 }
 </script>

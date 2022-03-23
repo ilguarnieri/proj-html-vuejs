@@ -53,7 +53,7 @@ export default{
             user-select: none;
 
             a{
-                color: $textHeaderHover;
+                color: $white;
                 @include transition;
 
 
