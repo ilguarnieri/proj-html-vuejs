@@ -7,7 +7,8 @@
 
             <button class="btn">
                 <a :href="styleSeparator.link">
-                    <span class="btn-text">{{styleSeparator.button}}</span>
+                    {{styleSeparator.button}}
+                    <span class="btn__arrow"></span>
                 </a>
             </button>
         </div>
@@ -54,20 +55,28 @@ export default {
 
         .btn{
             @include btn__violet;
+            @include transition;
             position: relative;
             padding-right: 30px;
 
 
-            .btn-text::after{
+            .btn__arrow{
                 content: '';
-                display: inline-block;
-                width: 30px;
-                aspect-ratio: 1;
-                background-image: url('../../assets/img/icon/slider_next.png');
-                background-size: cover;
                 position: absolute;
+                height: 35px;
                 top: 50%;
                 transform: translateY(-50%);
+                left: 0;
+                right: 0;
+                background-image: url('../../assets/img/icon/slider_next.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position-x: 100%;                
+            }
+            
+            & :hover{
+                background-image: url('../../assets/img/icon/slider_next_hover.png');
+                background-repeat: no-repeat;
             }
         }
     }

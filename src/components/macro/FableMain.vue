@@ -3,6 +3,7 @@
 
         <FirstJumbo />
         <SeparatorBar :styleSeparator="separator1"/>
+        <WelcomeSection />
 
     </section>    
 </template>
@@ -11,13 +12,15 @@
 <script>
 import FirstJumbo from '../sections/FirstJumbo.vue'
 import SeparatorBar from '../sections/SeparatorBar.vue'
+import WelcomeSection from '../sections/WelcomeSection.vue'
 
 export default {
     name:'FableMain',
 
     components:{
         FirstJumbo,
-        SeparatorBar
+        SeparatorBar,
+        WelcomeSection
     },
 
     data(){

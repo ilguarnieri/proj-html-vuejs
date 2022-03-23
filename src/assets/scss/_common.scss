@@ -55,6 +55,9 @@ a{
     border: 2px solid $white;
 
     &:hover{
-        background-color: $butterfly;
+        background-color: $white;
+        a{
+            color: $butterfly;
+        }
     }
 }

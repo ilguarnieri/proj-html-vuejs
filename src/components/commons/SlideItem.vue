@@ -14,7 +14,7 @@
 
         <div class="container">
             <p class="section__description">{{imageSlide.description}}</p>
-            <p class="section__title">{{imageSlide.title}}</p>
+            <h1 class="section__title">{{imageSlide.title}}</h1>
             <p class="section__secondTitle">{{imageSlide.secondTitle}}</p>
 
             <button class="btn">

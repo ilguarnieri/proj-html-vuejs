@@ -73,6 +73,7 @@ export default{
 
 <style lang="scss" scoped>
 @import '../../assets/scss/_variables.scss';
+@import '../../assets/scss/_common.scss';
 
 .slider{
     position: relative;
@@ -94,6 +95,11 @@ export default{
             border: 2px solid $orange;
             align-self: flex-end;
             cursor: pointer;
+            @include transition;
+
+            &:hover{
+                background-color: $orange;
+            }
         }
 
         .activeThumb{
