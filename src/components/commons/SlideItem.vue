@@ -20,7 +20,7 @@
 <script>
 
 export default{
-    name:'SlideDynamic',
+    name:'SlideItem',
 
     props:{
         imageSlide:{
@@ -61,11 +61,12 @@ export default{
         z-index: 0;
 
         & > *{
-            width: 80px;    
+            width: 80px;
         }
 
         .icon-1, .icon-3{
             align-self: flex-end;
+            transform: scale(1.1);
         }
 
         .icon-4{
@@ -89,6 +90,14 @@ export default{
 
     &.active{
         display: block;
+    }
+
+    .icon-0, .icon-2, .icon-4{
+        animation: 1s iconZoomIn linear infinite;
+    }
+
+    .icon-1, .icon-3{
+        animation: 1s iconZoomOut linear infinite;
     }
 }
 
@@ -119,4 +128,27 @@ export default{
       
 }
 
+@keyframes iconZoomIn {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    10%{
+        transform: scale(1);
+    }    
+}
+
+@keyframes iconZoomOut {
+    0%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(1);
+    }
+    10%{
+        transform: scale(1.1);
+    }    
+}
 </style>

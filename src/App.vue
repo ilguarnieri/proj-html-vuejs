@@ -5,7 +5,7 @@
     <!-- burger menu -->
     <BurgerMenu />
 
-    <JumboSlides />
+    <FirstJumbo />
 
   </body>
 </template>
@@ -13,14 +13,14 @@
 <script>
 import FableHeader from './components/macro/FableHeader.vue'
 import BurgerMenu from './components/commons/BurgerMenu.vue'
-import JumboSlides from './components/sections/JumboSlides.vue'
+import FirstJumbo from './components/sections/FirstJumbo.vue'
 
 export default {
   name: 'App',
   components: {
     FableHeader,
     BurgerMenu,
-    JumboSlides
+    FirstJumbo
   }
 }
 </script>

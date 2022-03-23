@@ -1,38 +1,24 @@
 <template>
+    <section>
 
-    <section class="slider">
-
-        <!-- img -->
-        <SlideDynamic v-for="(object, i) in setImages" :key="i"
-        :imageSlide="object" :activeIndex="currentIndex === i ? true : false"/>
-
-        <!-- icon thumb -->
-        <div class="thumbnails">
-
-            <div class="thumb" v-for="(objec, index) in setImages" :key="index"
-            :class="currentIndex === index ? 'activeThumb' : ''" @click="thumbClick(index)">
-
-            </div>        
-        </div>
-
+        <SlideWrapper :setImages="setImages"/>
+        
     </section>
 </template>
 
 
 <script>
-import SlideDynamic from '../../components/commons/SlideDynamic.vue'
+import SlideWrapper from '../commons/SlideWrapper.vue'
 
 export default{
-    name:'JumboSlides',
+    name:'FirstJumbo',
 
     components:{
-        SlideDynamic
+        SlideWrapper
     },
 
     data(){
         return{
-            currentIndex: 0,
-            clock: undefined,
             setImages:[
                 {
                     icon:[
@@ -72,61 +58,6 @@ export default{
                 }
             ]
         }
-    },
-
-    methods:{
-        thumbClick: function(i){
-            this.currentIndex = i
-        },
-
-        click_next: function(){
-            this.currentIndex++;
-            if(this.currentIndex > this.setImages.length -1){this.currentIndex = 0}
-        },
-
-        stop_play: function(){
-            clearInterval(this.clock)
-        },
-
-        start_play: function(){
-            this.clock = setInterval(this.click_next, 3000)
-        }
-    },
-
-    mounted(){
-        this.start_play()
-    }
+    }   
 }
-
 </script>
-
-
-<style lang="scss" scoped>
-
-.slider{
-    position: relative;
-
-    .thumbnails{
-
-        display: flex;
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        gap: 10px;
-        height: 20px;
-
-        .thumb{
-            content: '';
-            height: 11px;
-            width: 35px;
-            border: 2px solid orange;
-            align-self: flex-end;
-            cursor: pointer;
-        }
-
-        .activeThumb{
-            align-self: flex-start;
-        }
-    }
-}
-</style>
