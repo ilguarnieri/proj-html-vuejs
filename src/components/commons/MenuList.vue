@@ -60,7 +60,7 @@ export default{
 @import '../../assets/scss/_common.scss';
 
 .header__menu{
-    color: $textHeader;
+    color: $butterfly;
     display: flex;
     align-items: center;  
 
@@ -89,7 +89,7 @@ export default{
             }
 
             &:hover, &.active{
-                background-color: $itemMenuHover;
+                background-color: $orange;
                 color: $textHeaderHover;
             }
         }

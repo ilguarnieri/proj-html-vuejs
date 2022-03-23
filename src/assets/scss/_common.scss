@@ -1,3 +1,7 @@
+@import '~@fontsource/open-sans/index.css';
+@import '~@fontsource/handlee/index.css';
+@import './variables';
+
 *{
     margin: 0;
     padding: 0;
@@ -24,6 +28,23 @@ a{
     color: currentColor;
 }
 
+.btn{
+    text-transform: uppercase;
+    padding: 15px 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
 @mixin transition{
     transition: all 250ms linear;
+}
+
+@mixin btn__orange{
+    background-color: $orange;
+    border: none;
+
+    &:hover{
+        background-color: $butterfly;
+    }
 }

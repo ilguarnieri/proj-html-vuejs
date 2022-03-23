@@ -58,7 +58,7 @@ export default{
 
 
                 &:hover, &.active{
-                    color: $textBurgerHover;
+                    color: $orange;
                 }
             }
         }

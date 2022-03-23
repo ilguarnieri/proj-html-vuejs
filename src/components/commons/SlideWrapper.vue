@@ -72,6 +72,7 @@ export default{
 
 
 <style lang="scss" scoped>
+@import '../../assets/scss/_variables.scss';
 
 .slider{
     position: relative;
@@ -90,7 +91,7 @@ export default{
             content: '';
             height: 11px;
             width: 35px;
-            border: 2px solid orange;
+            border: 2px solid $orange;
             align-self: flex-end;
             cursor: pointer;
         }

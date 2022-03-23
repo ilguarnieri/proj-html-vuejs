@@ -21,6 +21,11 @@ export default{
         return{
             setImages:[
                 {
+                    title:'Lorem Ipsum',
+                    secondTitle: 'Dolor Sit Amet',
+                    description: 'Consectetur Adipisicing',
+                    button: 'Buy Elit',
+                    linkBtn: '#',
                     icon:[
                         require('../../assets/img/background/slider_icon1.png'),
                         require('../../assets/img/background/slider_icon2.png'),
@@ -33,6 +38,10 @@ export default{
                     imgBlur: require('../../assets/img/photo/slider_slide1_img2.png')
                 },
                 {
+                    title:'Welcoming Place',
+                    secondTitle: 'For Every Child',
+                    description: 'Friendly Atmosphere',
+                    button: 'Buy this theme now',
                     icon:[
                         require('../../assets/img/background/slider_icon16.png'),
                         require('../../assets/img/background/slider_icon14.png'),
@@ -45,6 +54,10 @@ export default{
                     imgBlur: require('../../assets/img/photo/slider_slide2_img2.png')
                 },
                 {
+                    title:'Dicta Obcaecati',
+                    secondTitle: 'Id Nostrum',
+                    description: 'Laboriosam',
+                    button: 'Eius ut',
                     icon:[
                         require('../../assets/img/background/slider_icon15.png'),
                         require('../../assets/img/background/slider_icon11.png'),

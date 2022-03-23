@@ -12,6 +12,18 @@
             <img :src="imageSlide.imgFocus" alt="">
         </div>
 
+        <div class="container">
+            <p class="section__description">{{imageSlide.description}}</p>
+            <p class="section__title">{{imageSlide.title}}</p>
+            <p class="section__secondTitle">{{imageSlide.secondTitle}}</p>
+
+            <button class="btn">
+                <a :href="imageSlide.linkBtn">
+                    {{imageSlide.button}}
+                </a>
+            </button>
+        </div>
+
     </div>
     
 </template>
@@ -35,20 +47,19 @@ export default{
 
 
 <style lang="scss" scoped>
+@import '../../assets/scss/_variables.scss';
+@import '../../assets/scss/_common.scss';
 
 .slide__animation{
     min-height: 650px;
-
-
     display: none;
-
-
     background-repeat: repeat-x;
     background-size: contain;
     position: relative;
     user-select: none;
     padding-top: 30px;
     overflow-x: hidden;
+    position: relative;
 
     .bg__icon{
         position: relative;
@@ -99,22 +110,59 @@ export default{
     .icon-1, .icon-3{
         animation: 1s iconZoomOut linear infinite;
     }
+
+    .container{
+        color: $butterfly;
+
+        .section__description{
+            font-family: "Handlee", cursive;
+            color: $orange;
+            font-size: min(7vw, 35px);
+        }
+
+        .section__title{
+            font-weight: bold;            
+            font-size: min(9vw, 50px);
+        }
+
+        .section__secondTitle{
+            font-size: min(8vw, 40px);
+            margin-bottom: 45px;
+        }
+
+        .btn{
+            @include btn__orange;
+            @include transition;
+        }
+    }
 }
 
-@media screen and(max-width:700px) {
+@media screen and(max-width:850px) {
 
     .slide__animation{
-
         min-height: 350px;
 
         .bg__icon{
-        transform: translateX(-50%);
-        justify-content: center;
-    }
+            transform: translateX(-50%);
+            justify-content: center;
+        }
         
         .play__child{
             background-size: 0;
             width: 0;
+        }
+
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+
+            .section__secondTitle{
+                margin-bottom: 10px;
+            }
         }
     }    
 }
@@ -123,9 +171,7 @@ export default{
 
     .icon-0, .icon-4{
         display: none;
-    }
-
-      
+    }      
 }
 
 @keyframes iconZoomIn {
