@@ -1,13 +1,21 @@
 <template>
 
-    <section>
+    <section class="slider">
 
-        <SlideDynamic v-for="(object, i) in setImages" :key="i" :imageSlide="object"/>
-        
+        <!-- img -->
+        <SlideDynamic v-for="(object, i) in setImages" :key="i"
+        :imageSlide="object" :activeIndex="currentIndex === i ? true : false"/>
+
+        <!-- icon thumb -->
+        <div class="thumbnails">
+
+            <div class="thumb" v-for="(objec, index) in setImages" :key="index"
+            :class="currentIndex === index ? 'activeThumb' : ''">
+
+            </div>        
+        </div>
+
     </section>
-
-    
-    
 </template>
 
 
@@ -23,9 +31,8 @@ export default{
 
     data(){
         return{
+            currentIndex: 0,
             setImages:[
-
-
                 {
                     icon:[
                         require('../../assets/img/background/slider_icon1.png'),
@@ -36,10 +43,8 @@ export default{
                     ],
                     bg: require('../../assets/img/background/slider_slide1_background.png'),
                     imgFocus: require('../../assets/img/photo/slider_slide1_img1.png'),
-                    imgBlur: require('../../assets/img/photo/slider_slide1_img2.png')                    
+                    imgBlur: require('../../assets/img/photo/slider_slide1_img2.png')
                 },
-
-
                 {
                     icon:[
                         require('../../assets/img/background/slider_icon16.png'),
@@ -52,7 +57,6 @@ export default{
                     imgFocus: require('../../assets/img/photo/slider_slide2_img1.png'),
                     imgBlur: require('../../assets/img/photo/slider_slide2_img2.png')
                 },
-
                 {
                     icon:[
                         require('../../assets/img/background/slider_icon15.png'),
@@ -63,11 +67,8 @@ export default{
                     ],
                     bg: require('../../assets/img/background/slider_slide3_background.png'),
                     imgFocus: require('../../assets/img/photo/slider_slide3_img1.png'),
-                    imgBlur: require('../../assets/img/photo/slider_slide3_img2.png')                    
-                },
-
-
-
+                    imgBlur: require('../../assets/img/photo/slider_slide3_img2.png')
+                }
             ]
         }
     }
@@ -78,5 +79,29 @@ export default{
 
 <style lang="scss" scoped>
 
+.slider{
+    position: relative;
 
+    .thumbnails{
+
+        display: flex;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        gap: 10px;
+        height: 20px;
+
+        .thumb{
+            content: '';
+            height: 11px;
+            width: 35px;
+            border: 2px solid orange;
+            align-self: flex-end;
+        }
+
+        .activeThumb{
+            align-self: flex-start;
+        }
+    }
+}
 </style>

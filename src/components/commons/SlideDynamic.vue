@@ -1,6 +1,7 @@
 <template>
 
-    <div class="slide__animation" :style="{backgroundImage: `url(${imageSlide.bg})`}">
+    <div class="slide__animation" :style="{backgroundImage: `url(${imageSlide.bg})`}"
+    :class="activeIndex ? 'active' : '' ">
 
         <div class="bg__icon">
             <img  v-for="(icon, i) in imageSlide.icon" :key="i"
@@ -25,7 +26,8 @@ export default{
         imageSlide:{
             type: Object,
             require: true
-        }
+        },
+        activeIndex: Boolean
     }
 }
 
@@ -38,11 +40,15 @@ export default{
     min-height: 650px;
 
 
+    display: none;
+
+
     background-repeat: repeat-x;
     background-size: contain;
     position: relative;
     user-select: none;
     padding-top: 30px;
+    overflow-x: hidden;
 
     .bg__icon{
         position: relative;
@@ -79,6 +85,10 @@ export default{
         align-items: center;
         background-repeat: no-repeat;
         background-position: center right;
+    }
+
+    &.active{
+        display: block;
     }
 }
 
