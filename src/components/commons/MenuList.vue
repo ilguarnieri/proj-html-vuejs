@@ -19,7 +19,8 @@
             </li>                    
         </ul>
 
-        <div class="hamburger__icon">
+        <!-- burger menu icon -->
+        <div class="burger__icon">
             <font-awesome-icon icon="fa-bars" />
         </div>
 
@@ -78,7 +79,7 @@ export default{
         }
     }
 
-    .hamburger__icon{
+    .burger__icon{
         font-size: 32px;
         display: none;
         cursor: pointer;
@@ -93,7 +94,7 @@ export default{
             display: none;
         }
 
-        .hamburger__icon{
+        .burger__icon{
             display: block;
         }
     }    
