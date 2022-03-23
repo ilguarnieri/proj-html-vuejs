@@ -2,8 +2,10 @@
   <body id="app">
 
     <FableHeader />
-    <!-- hamburger menu -->
+    <!-- burger menu -->
     <BurgerMenu />
+
+    <JumboSlides />
 
   </body>
 </template>
@@ -11,12 +13,14 @@
 <script>
 import FableHeader from './components/macro/FableHeader.vue'
 import BurgerMenu from './components/commons/BurgerMenu.vue'
+import JumboSlides from './components/sections/JumboSlides.vue'
 
 export default {
   name: 'App',
   components: {
     FableHeader,
-    BurgerMenu
+    BurgerMenu,
+    JumboSlides
   }
 }
 </script>
