@@ -7,7 +7,13 @@
         <OrganizationTime />
         <ClassSection />
 
+        <!-- education section -->
+
+        <GallerySection />
         <SeparatorBar :styleSeparator="separator2"/>
+
+        <!-- second jumbo slider -->
+        <!-- whats new -->
 
         <GeoMap />
         <FableFooter />
@@ -23,6 +29,7 @@ import WelcomeSection from '../sections/WelcomeSection.vue'
 import OrganizationTime from '../sections/OrganizationTime.vue'
 import ClassSection from '../sections/ClassSection.vue'
 
+import GallerySection  from '../sections/GallerySection.vue'
 import GeoMap from '../sections/GeoMap.vue'
 import FableFooter from '../macro/FableFooter.vue'
 
@@ -36,6 +43,7 @@ export default {
         OrganizationTime,
         ClassSection,
 
+        GallerySection,
         GeoMap,
         FableFooter
     },
