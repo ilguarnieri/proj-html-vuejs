@@ -1,0 +1,153 @@
+<template>
+    <section class="card-wrapper">
+
+        <div class="card-info">
+            <div class="card__header">
+                <h4 class="card__title">{{info.title}}</h4>
+                <p class="card__subtitle">{{info.subtitle}}</p>
+            </div>
+
+            <div class="card__footer">
+                <div class="info__years">
+                    <p>{{info.time}}</p>
+                    <p>{{info.yearsOld}}</p>
+                </div>
+
+                <div class="info__size">
+                    <p>{{info.classSize}}</p>
+                    <p>Class size</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-image">
+            <img :src="info.image">
+        </div>
+
+        <div class="cta-card">
+            <button class="btn">
+                Read more
+                <span class="btn__arrow"></span>
+            </button>
+        </div>
+
+    </section>    
+</template>
+
+
+<script>
+export default{
+    name:'InfoClassCard',
+
+    props:{
+        info:{
+            type: Object,
+            required: true
+        }
+    }    
+}
+</script>
+
+
+<style lang="scss" scoped>
+@import '../../assets/scss/_variables.scss';
+@import '../../assets/scss/_common.scss';
+
+.card-wrapper{
+    display: flex;
+    background-color: $butterfly;
+    position: relative;
+    width: 100%;
+    color: $white;
+    font-size: min(3.5vw, 14px);
+
+    .card-info, .card-image{
+        width: calc(100% / 2);
+    }
+
+    .card-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+
+        .card__header{
+            .card__title{
+                font-size: min(4vw, 20px);
+            }
+        }
+
+        .card__footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .info__years{
+                border-right: 1px solid red;
+            }
+
+            .info__years, .info__size{
+                padding: 0 15px;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .cta-card{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        
+        .btn{        
+            @include btn__orange;
+            @include transition;
+            position: relative;
+            padding-right: 30px;
+
+            .btn__arrow{
+                content: '';
+                position: absolute;
+                height: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                right: 0;
+                background-image: url('../../assets/img/icon/slider_next.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position-x: 105%;
+                border: 5px solid transparent;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    .card-wrapper{
+        flex-direction: column;
+        aspect-ratio: 1;
+        justify-content: start;
+        overflow: hidden;
+
+        .card-info{
+            min-height: calc(100% / 3);
+            width: 100%;
+
+            .card__header{
+                text-align: center;
+                .card__subtitle{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        
+        .card-image{
+            height: calc(100% / 2);
+            width: 100%;    
+        }
+    }
+
+}
+</style>

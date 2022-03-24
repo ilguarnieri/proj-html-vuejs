@@ -5,6 +5,7 @@
         <SeparatorBar :styleSeparator="separator1"/>
         <WelcomeSection />
         <OrganizationTime />
+        <ClassSection />        
 
     </section>    
 </template>
@@ -15,6 +16,7 @@ import FirstJumbo from '../sections/FirstJumbo.vue'
 import SeparatorBar from '../sections/SeparatorBar.vue'
 import WelcomeSection from '../sections/WelcomeSection.vue'
 import OrganizationTime from '../sections/OrganizationTime.vue'
+import ClassSection from '../sections/ClassSection.vue'
 
 export default {
     name:'FableMain',
@@ -23,7 +25,8 @@ export default {
         FirstJumbo,
         SeparatorBar,
         WelcomeSection,
-        OrganizationTime
+        OrganizationTime,
+        ClassSection
     },
 
     data(){
