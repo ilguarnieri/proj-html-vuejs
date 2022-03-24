@@ -73,7 +73,6 @@ export default{
         this.startPlay()
     }
 }
-
 </script>
 
 
@@ -83,7 +82,6 @@ export default{
 .carousel-wrapper{
 
     .carousel__slider{
-
         position: relative;
 
         .carousel__item{
@@ -96,29 +94,26 @@ export default{
             &.active{
                 display: block;
             }
-
-            
         }
 
         .arrow__carousel{
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
 
-                .arrow__prev, .arrow__next{
-                    background-color: $orange;
-                    cursor: pointer;
+            .arrow__prev, .arrow__next{
+                background-color: $orange;
+                cursor: pointer;
+                user-select: none;
+
+                &:hover{
+                    background-color: $butterfly;
                 }
             }
-
-
-
+        }
     }
-
 }
-
-
 </style>

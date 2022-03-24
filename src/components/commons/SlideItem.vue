@@ -23,9 +23,8 @@
                 </a>
             </button>
         </div>
-
     </div>
-    
+
 </template>
 
 

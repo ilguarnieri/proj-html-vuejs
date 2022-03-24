@@ -96,6 +96,7 @@ export default{
                 border-radius: 50%;
                 width: 175px;
                 height: 175px;
+                user-select: none;
     
                 img{
                     height: 60px;
