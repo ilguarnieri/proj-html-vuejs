@@ -4,7 +4,8 @@
 
         <div class="carousel__slider">
             <div class="carousel__item" v-for="(img, i) in images" :key="i"
-            :class="currentIndex === i ? 'active' : '' ">
+            :class="currentIndex === i ? 'active' : '' "
+            @mouseenter="stopPlay" @mouseleave="startPlay">
                 <!-- image -->
                 <img :src="img">
             </div>
@@ -20,6 +21,19 @@
                     <img src="../../assets/img/icon/slider_next.png">
                 </div>
             </div>
+        </div>
+
+        <div class="thumb">
+
+            <div class="thumb__item" v-for="(img, i) in images" :key="i"
+            @mouseenter="stopPlay" @mouseleave="startPlay"
+            :class="currentIndex === i ? 'active' : '' "
+            @click="thumbClick(i)">
+                <!-- image -->
+                <img :src="img">
+            </div>
+
+
         </div>
         
     </section>
@@ -81,15 +95,20 @@ export default{
 
 .carousel-wrapper{
 
-    .carousel__slider{
+    .carousel__slider{        
         position: relative;
+        margin-bottom: 10px;
 
         .carousel__item{
-            width: 490px;
-            height: 360px;
-            display: none;
             
-            user-select: none;
+            display: none;            
+            user-select: none;            
+
+                img{
+                    width: 100%;
+                    object-position: center;
+                    object-fit: cover;
+                }
 
             &.active{
                 display: block;
@@ -113,6 +132,25 @@ export default{
                     background-color: $butterfly;
                 }
             }
+        }
+    }
+
+    .thumb{
+        display: flex;
+        gap: 10px;
+
+        .thumb__item{
+            cursor: pointer;
+
+            &.active::after{
+                content: '';
+                display: block;
+                position: relative;
+                top: 10px;
+                height: 5px;
+                width: 100%;
+                background-color: $orange;
+            }           
         }
     }
 }

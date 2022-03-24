@@ -4,15 +4,10 @@
 
         <div class="container">
 
-            <div>
-
-            </div>
-
             <!-- carousel -->
             <MiniCarousel :images="imgCarousel"/>
 
         </div>
-
 
     </section>
     
@@ -46,12 +41,14 @@ export default{
 @import '../../assets/scss/_variables.scss';
 
 .organization{
-    background-color: $bggray;    
+    background-color: $bggray;
 
     .container{
         display: flex;
         justify-content: space-between;
-        padding: 75px 0;
+        padding: 75px 10px;
+
+        
     }
 }
 
