@@ -119,7 +119,7 @@ export default{
 
                 .btn{
                     color: $gray;
-                    opacity: 0.5;
+                    opacity: 0.7;
                     @include transition;
                     position: relative;
 

@@ -6,9 +6,11 @@
         <WelcomeSection />
         <OrganizationTime />
         <ClassSection />
+
         <SeparatorBar :styleSeparator="separator2"/>
 
         <GeoMap />
+        <FableFooter />
 
     </section>    
 </template>
@@ -22,6 +24,7 @@ import OrganizationTime from '../sections/OrganizationTime.vue'
 import ClassSection from '../sections/ClassSection.vue'
 
 import GeoMap from '../sections/GeoMap.vue'
+import FableFooter from '../macro/FableFooter.vue'
 
 export default {
     name:'FableMain',
@@ -33,7 +36,8 @@ export default {
         OrganizationTime,
         ClassSection,
 
-        GeoMap
+        GeoMap,
+        FableFooter
     },
 
     data(){

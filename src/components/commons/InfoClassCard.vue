@@ -84,7 +84,7 @@ export default{
             text-align: center;
 
             .info__years{
-                border-right: 1px solid red;
+                border-right: 1px solid $white;
             }
 
             .info__years, .info__size{
