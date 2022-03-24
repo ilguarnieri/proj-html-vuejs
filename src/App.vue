@@ -8,7 +8,6 @@
     <BurgerMenu />    
 
     <div v-show="!store.burgerActive">
-
       <!-- main -->
       <FableMain />
     </div>
@@ -44,6 +43,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-   font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 </style>

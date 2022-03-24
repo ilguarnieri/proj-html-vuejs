@@ -9,7 +9,7 @@
         </div>
 
         <div class="play__child" :style="{backgroundImage: `url(${imageSlide.imgBlur})`}">
-            <img :src="imageSlide.imgFocus" alt="">
+            <img :src="imageSlide.imgFocus">
         </div>
 
         <div class="container">
@@ -37,7 +37,7 @@ export default{
     props:{
         imageSlide:{
             type: Object,
-            require: true
+            required: true
         },
         activeIndex: Boolean
     }

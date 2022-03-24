@@ -16,11 +16,11 @@ export default{
     props:{
         title:{
             type: String,
-            require: true
+            required: true
         },
         subtitle:{
             type: String,
-            require: true
+            required: true
         }
     }    
 }

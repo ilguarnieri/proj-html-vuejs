@@ -28,7 +28,7 @@ export default{
     props:{
         setImages:{
             type: Array,
-            require: true
+            required: true
         }
     },
 
@@ -40,7 +40,6 @@ export default{
         return{
             currentIndex: 0,
             clock: undefined,
-            
         }
     },
 

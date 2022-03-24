@@ -37,6 +37,16 @@ a{
     white-space: nowrap;
 }
 
+/* SCROLL-BAR STYLE */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: $green;
+}
+
 @mixin transition{
     transition: all 250ms linear;
 }
