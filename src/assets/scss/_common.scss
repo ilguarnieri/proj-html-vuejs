@@ -29,7 +29,7 @@ a{
 }
 
 .btn{
-    text-transform: uppercase;
+    border: none;
     padding: 15px 20px;
     font-weight: bold;
     color: white;
@@ -52,6 +52,7 @@ a{
 }
 
 @mixin btn__orange{
+    text-transform: uppercase;
     background-color: $orange;
     border: none;
 
@@ -61,6 +62,7 @@ a{
 }
 
 @mixin btn__violet{
+    text-transform: uppercase;
     background-color: transparent;
     border: 2px solid $white;
     user-select: none;

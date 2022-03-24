@@ -24,7 +24,6 @@
         </div>
 
         <div class="thumb">
-
             <div class="thumb__item" v-for="(img, i) in images" :key="i"
             @mouseenter="stopPlay" @mouseleave="startPlay"
             :class="currentIndex === i ? 'active' : '' "
@@ -32,8 +31,6 @@
                 <!-- image -->
                 <img :src="img">
             </div>
-
-
         </div>
         
     </section>
@@ -127,6 +124,8 @@ export default{
                 background-color: $orange;
                 cursor: pointer;
                 user-select: none;
+                width: 35px;
+                height: 35px;
 
                 &:hover{
                     background-color: $butterfly;
