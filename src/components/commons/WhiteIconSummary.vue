@@ -33,6 +33,8 @@ export default {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    cursor: pointer;
+    @include transition;
 
     .card-img{        
         background-color: $white;
@@ -43,6 +45,7 @@ export default {
         width: 75px;
         aspect-ratio: 1;
         margin-bottom: 15px;
+        user-select: none;
 
         img{
             width: 30px;
@@ -54,6 +57,10 @@ export default {
         color: $butterfly;
         @include font20;
         margin-bottom: 15px;
+    }
+
+    &:hover{
+        transform: scale(1.1);
     }
 }
 
