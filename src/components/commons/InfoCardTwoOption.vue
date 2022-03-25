@@ -36,13 +36,14 @@ export default{
 
 <style lang="scss" scoped>
 @import '../../assets/scss/_variables.scss';
+@import '../../assets/scss/_common.scss';
 
 .info{
     color: $butterfly;
 
     .info__title{
         margin-bottom: 30px;
-        font-size: min(6vw, 27px);
+        @include font27;
     }
 
     .info__description{
@@ -72,13 +73,11 @@ export default{
 
             .option__title{
                 margin-bottom: 15px;
-                font-size:  min(5.2vw, 20px);
+                @include font20;
             }
 
             .option__description{
-                color: $gray;
-                font-size: 15px;
-               
+                color: $gray;               
             }
         }
     }

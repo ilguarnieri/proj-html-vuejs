@@ -76,6 +76,7 @@ export default{
 
 <style lang="scss" scoped>
 @import '../../assets/scss/_variables.scss';
+@import '../../assets/scss/_common.scss';
 
 .section-class{
     .container{
@@ -89,13 +90,11 @@ export default{
 
             .section__title{
                 color: $butterfly;
-                font-size: min(6vw, 27px);
+                @include font27;
             }
 
             .section__description{
-                font-size: 15px;
                 color: $gray;
-
             }
 
             .section__title, .section__description{
@@ -105,11 +104,12 @@ export default{
 
         .card-info-class{
             display: flex;
+            justify-content: space-between;
             flex-wrap: wrap;
             gap: 30px;
             
             .single__card{
-                width: calc((100% / 2) - 30px);
+                width: calc((100% / 2) - 20px);
             }
 
             @media screen and (max-width: 900px){

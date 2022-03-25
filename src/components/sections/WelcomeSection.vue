@@ -114,13 +114,12 @@ export default{
 
             .service__title{
                 color: $butterfly;
-                font-size: 23px;
+                @include font23;
                 font-weight: 600;
             }
             
             .service__description{
                 color: $gray;
-                font-size: 15px;
             }
 
             &:hover{

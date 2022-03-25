@@ -46,11 +46,11 @@ export default {
     }
 
     .container{
+        @include font35;
         height: 140px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: min(6vw, 35px);
         gap: 10px;
 
         .btn{

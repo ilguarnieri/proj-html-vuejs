@@ -19,7 +19,7 @@
 
 
 <script>
-export default{
+export default {
     name:'IconTitle3Line',
 
     props:{
@@ -40,14 +40,13 @@ export default{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
     color: $gray;
 
     .title{
         padding-top: 20px;
         padding-bottom: 15px;
         color: $butterfly;
-        font-size: 18px;
+        font-size: 17px;
 
     }
 

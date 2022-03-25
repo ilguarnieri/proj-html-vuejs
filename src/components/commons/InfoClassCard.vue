@@ -59,10 +59,14 @@ export default{
     position: relative;
     width: 100%;
     color: $white;
-    font-size: min(3.5vw, 14px);
 
     .card-info, .card-image{
         width: calc(100% / 2);
+        
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     .card-info{
@@ -73,7 +77,11 @@ export default{
 
         .card__header{
             .card__title{
-                font-size: min(4vw, 20px);
+                @include font20;
+            }
+
+            .card__subtitle{
+                margin-bottom: 15px;
             }
         }
 
@@ -124,7 +132,7 @@ export default{
 
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
     .card-wrapper{
         flex-direction: column;
         aspect-ratio: 1;
@@ -141,6 +149,10 @@ export default{
                     margin-bottom: 20px;
                 }
             }
+        }
+
+        .card-image img{
+            height: auto;
         }
         
         .card-image{

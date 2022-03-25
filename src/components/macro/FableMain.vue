@@ -6,9 +6,7 @@
         <WelcomeSection />
         <OrganizationTime />
         <ClassSection />
-
-        <!-- education section -->
-
+        <StyleEducation />
         <GallerySection />
         <SeparatorBar :styleSeparator="separator2"/>
 
@@ -28,8 +26,10 @@ import SeparatorBar from '../sections/SeparatorBar.vue'
 import WelcomeSection from '../sections/WelcomeSection.vue'
 import OrganizationTime from '../sections/OrganizationTime.vue'
 import ClassSection from '../sections/ClassSection.vue'
-
+import StyleEducation from '../sections/StyleEducation.vue'
 import GallerySection  from '../sections/GallerySection.vue'
+
+
 import GeoMap from '../sections/GeoMap.vue'
 import FableFooter from '../macro/FableFooter.vue'
 
@@ -42,8 +42,10 @@ export default {
         WelcomeSection,
         OrganizationTime,
         ClassSection,
-
+        StyleEducation,
         GallerySection,
+
+
         GeoMap,
         FableFooter
     },

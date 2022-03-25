@@ -57,7 +57,7 @@ export default{
                     title:'Dicta Obcaecati',
                     secondTitle: 'Id Nostrum',
                     description: 'Laboriosam',
-                    button: 'Eius ut',
+                    button: 'Eius ut amet',
                     icon:[
                         require('../../assets/img/background/slider_icon15.png'),
                         require('../../assets/img/background/slider_icon11.png'),

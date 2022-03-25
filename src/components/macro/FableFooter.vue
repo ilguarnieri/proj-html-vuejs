@@ -127,7 +127,6 @@ export default{
                     line-height: 40px;
                     padding-left: 15px;
                     border: 1px solid $lightgray;
-                    font-size: 15px;
                 }
             }
 
@@ -146,7 +145,6 @@ export default{
                     white-space:pre-wrap;
                     font-family: "Open Sans", sans-serif;
                     resize: none;
-                    font-size: 15px;
                 }
             }
 

@@ -116,16 +116,16 @@ export default{
         .section__description{
             font-family: "Handlee", cursive;
             color: $orange;
-            font-size: min(7vw, 35px);
+            @include font35;
         }
 
         .section__title{
             font-weight: bold;            
-            font-size: min(9vw, 50px);
+            @include font50;
         }
 
         .section__secondTitle{
-            font-size: min(8vw, 40px);
+            @include font40;
             margin-bottom: 45px;
         }
 

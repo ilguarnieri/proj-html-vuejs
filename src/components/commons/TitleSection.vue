@@ -29,20 +29,22 @@ export default{
 
 <style lang="scss" scoped>
 @import '../../assets/scss/_variables.scss';
+@import '../../assets/scss/_common.scss';
 
 .section__header{
     text-align: center;
 
     .title{
+        @include font45;
         color: $butterfly;
-        font-size: min(7.5vw, 45px);
         font-weight: 400;
         margin-bottom: 10px;
     }
 
     .subtitle{
         color:$gray;
-        font-size: min(3.7vw, 17px);
+        @include font17;
+        
 
         &::after{
             content: '';
