@@ -91,12 +91,8 @@ export default{
             .section__title{
                 color: $butterfly;
                 @include font27;
-            }
-
-            .section__description{
-                color: $gray;
-            }
-
+            } 
+            
             .section__title, .section__description{
                 width: calc((100% / 2) - 30px);
             }

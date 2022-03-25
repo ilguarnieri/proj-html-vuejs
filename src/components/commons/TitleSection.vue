@@ -42,7 +42,6 @@ export default{
     }
 
     .subtitle{
-        color:$gray;
         @include font17;
         
 

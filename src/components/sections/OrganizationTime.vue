@@ -118,7 +118,6 @@ export default{
                 user-select: none;
 
                 .btn{
-                    color: $gray;
                     opacity: 0.7;
                     @include transition;
                     position: relative;

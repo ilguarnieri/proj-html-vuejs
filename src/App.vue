@@ -38,6 +38,7 @@ export default {
 
 <style lang="scss">
 @import './assets/scss/_common.scss';
+@import './assets/scss/_variables.scss';
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -45,5 +46,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
+  color: $gray;
 }
 </style>

@@ -75,10 +75,6 @@ export default{
                 margin-bottom: 15px;
                 @include font20;
             }
-
-            .option__description{
-                color: $gray;               
-            }
         }
     }
 }

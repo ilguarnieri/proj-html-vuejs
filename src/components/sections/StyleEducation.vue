@@ -49,6 +49,7 @@ export default{
 
 <style lang="scss" scoped>
 @import '../../assets/scss/_variables.scss';
+@import '../../assets/scss/_common.scss';
 
 .education-wrapper{
     background-color: $lightgray;
@@ -74,7 +75,7 @@ export default{
 
             .title{
                 color: $butterfly;
-
+                @include font23;
             }
 
             .description{

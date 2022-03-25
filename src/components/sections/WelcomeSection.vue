@@ -117,10 +117,6 @@ export default{
                 @include font23;
                 font-weight: 600;
             }
-            
-            .service__description{
-                color: $gray;
-            }
 
             &:hover{
                 transform: scale(1.1);

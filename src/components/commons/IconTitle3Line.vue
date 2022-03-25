@@ -40,7 +40,6 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: $gray;
 
     .title{
         padding-top: 20px;
