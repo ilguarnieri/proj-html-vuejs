@@ -39,11 +39,11 @@ export default{
 @import '../../assets/scss/_common.scss';
 
 .info{
-    color: $butterfly;
 
     .info__title{
         margin-bottom: 30px;
         @include font27;
+        color: $butterfly;
     }
 
     .info__description{
@@ -74,6 +74,11 @@ export default{
             .option__title{
                 margin-bottom: 15px;
                 @include font20;
+                color: $butterfly;
+            }
+
+            .option__description{
+                color: $gray;               
             }
         }
     }

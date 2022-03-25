@@ -12,8 +12,7 @@
             </div>
 
             <div class="icon-summary">
-                ciaodsafsafsasfa
-
+                <WhiteIconSummary class="sum-items" v-for="(sum, i) in iconsSummary" :key="i" :summary="sum" />                
             </div>
         </div>
 
@@ -23,12 +22,15 @@
 
 <script>
 import CheckList from '../commons/CheckList.vue'
+import WhiteIconSummary from '../commons/WhiteIconSummary.vue'
+
 
 export default{
     name:'StyleEducation',
 
     components:{
-        CheckList
+        CheckList,
+        WhiteIconSummary
     },
 
     data(){
@@ -40,6 +42,28 @@ export default{
                 'Learning program with after-school care',
                 'Opportunities to carry out scientific investigations',
                 'Positive learning environment for your child'
+            ],
+            iconsSummary:[
+                {
+                    icon: require('../../assets/img/icon/toy.png'),
+                    title: 'Learnin & Fun',
+                    descr: 'Praesent modea est gravida node vehicula luctus.'
+                },
+                {
+                    icon: require('../../assets/img/icon/meal.png'),
+                    title: 'Healthy Meals',
+                    descr: 'Terminal interdum a eleifend maecenas est morbi.'
+                },
+                {
+                    icon: require('../../assets/img/icon/school.png'),
+                    title: 'Friendly Place',
+                    descr: 'Terminal interdum a eleifend maecenas est morbi.'
+                },
+                {
+                    icon: require('../../assets/img/icon/shield.png'),
+                    title: 'Children Safety',
+                    descr: 'Praesent modea est gravida node vehicula luctus.'
+                }
             ]
         }
     }
@@ -55,7 +79,7 @@ export default{
     background-color: $lightgray;
 
     .container{
-        padding: 80px 0;
+        padding: 80px 10px;
         display: flex;
         justify-content: space-between;
 
@@ -77,12 +101,65 @@ export default{
                 color: $butterfly;
                 @include font23;
             }
+        }
 
-            .description{
-                
+        .icon-summary{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .sum-items{
+                width: calc(50% - 5px);
+                margin-bottom: 30px;
             }
         }
     }
 }
+
+@media screen and (max-width: 860px) {
+
+    .education-wrapper{
+        .container{
+            display: block;
+
+            .education-info, .icon-summary{
+                width: auto;
+            }
+
+            .education-info{
+
+                & :last-child{
+                    margin-bottom: 50px;
+                }
+            }
+
+            .icon-summary{
+                display: flex;
+                justify-content: space-between;
+
+                .sum-items{
+                    width: calc((100% / 4) - 20px);
+                    margin-bottom: 0;
+                }
+
+                @media screen and (max-width: 680px){
+                    justify-content: space-evenly;
+
+                    .sum-items{
+                        width: 230px;
+                        margin-bottom: 30px;
+                    }
+                }
+
+                @media screen and (max-width: 430px){
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}    
+
+
+
 
 </style>
