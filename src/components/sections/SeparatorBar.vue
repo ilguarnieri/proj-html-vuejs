@@ -61,18 +61,8 @@ export default {
 
 
             .btn__arrow{
-                content: '';
-                position: absolute;
-                height: 100%;
-                top: 50%;
-                transform: translateY(-50%);
-                left: 0;
-                right: 0;
+                @include btn_arrow;
                 background-image: url('../../assets/img/icon/slider_next.png');
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position-x: 105%;
-                border: 5px solid transparent;
             }
             
             & :hover{
@@ -82,5 +72,4 @@ export default {
         }
     }
 }
-
 </style>

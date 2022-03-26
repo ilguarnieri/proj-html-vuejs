@@ -11,8 +11,8 @@
         <SeparatorBar :styleSeparator="separator2"/>
 
         <!-- second jumbo slider -->
-        <!-- whats new -->
 
+        <ArticlesSection />
         <GeoMap />
         <FableFooter />
 
@@ -29,7 +29,7 @@ import ClassSection from '../sections/ClassSection.vue'
 import StyleEducation from '../sections/StyleEducation.vue'
 import GallerySection  from '../sections/GallerySection.vue'
 
-
+import ArticlesSection from '../sections/ArticlesSection.vue'
 import GeoMap from '../sections/GeoMap.vue'
 import FableFooter from '../macro/FableFooter.vue'
 
@@ -45,7 +45,7 @@ export default {
         StyleEducation,
         GallerySection,
 
-
+        ArticlesSection,
         GeoMap,
         FableFooter
     },
