@@ -91,15 +91,14 @@ export default{
 @import '../../assets/scss/_variables.scss';
 
 .carousel-wrapper{
+    user-select: none;
 
     .carousel__slider{        
         position: relative;
         margin-bottom: 10px;
 
-        .carousel__item{
-            
-            display: none;            
-            user-select: none;            
+        .carousel__item{            
+            display: none;
 
                 img{
                     width: 100%;

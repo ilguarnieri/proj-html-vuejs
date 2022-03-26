@@ -56,8 +56,9 @@ export default {
     .card-img{
         position: relative;
         margin-bottom: 20px;
+        user-select: none;
 
-        .card-number{
+        .card-number{            
             position: absolute;
             bottom: 0;
             right: 0;
@@ -74,7 +75,6 @@ export default {
     }
 
     .card-descr{
-
         border-bottom: 1px solid $lightgray;
         padding-bottom: 20px;
 
